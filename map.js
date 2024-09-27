@@ -1,0 +1,18 @@
+// map ==>always return
+
+const my_Nums = [1,2,3,4,5,6,7,8,9,10]
+
+// const new_Nums = my_Nums.map((num)=>{return num+10})
+// console.log(new_Nums);
+  
+
+// chaining = two or more method used at same time
+
+const myNum1 = [1,2,3,4,5,6,7,8,9,10]
+const newnums2 = myNum1
+                       .map((num)=>num*10)
+                       .map((num)=>num+1)
+                       .filter((num)=>num>40)
+console.log(newnums2);
+
+
