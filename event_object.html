@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object</title>
+</head>
+<body>
+    <button id = "btn1"> btn1 </button>
+    <div id = "box">this is box</div>
+</body>
+<script>
+    let btn1 = document.querySelector("#btn1")
+    btn1.onclick = (evt)=>{
+        console.log(evt);
+        console.log(evt.type);
+        console.log(evt.target);
+        console.log(evt.clientX,evt.clientY);
+        }
+    let box = document.querySelector("#box")
+    box.onmouseover = (evt)=>{
+        console.log(evt);
+        console.log(evt.type);
+        console.log(evt.target);
+        console.log(evt.clientX,evt.clientY);
+        
+    }
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button  id ="btn1" >btn1</button>
+  
+</body>
+<script>
+    // --------- event listners add-----
+    //  btn1 = document.querySelector("#btn1")
+    // btn1.addEventListener("click",(evt)=>{
+    //     console.log("button was clicked");
+    //     console.log(evt.type);
+        
+    //      })
+    //  btn1 = document.querySelector("#btn1")
+    // btn1.addEventListener("click",()=>{
+    //     console.log("button was clicked handler-2");
+    //      })
+
+// ------ event listners remove -------
+    btn1 = document.querySelector("#btn1")
+    btn1.addEventListener("click",()=>{
+        console.log("button was clicked handler-1");
+         })
+    
+    btn1.addEventListener("click",()=>{
+        console.log("button was clicked handler-2");
+         })
+
+    const handler3=()=>{
+        console.log("button was clicked handler-3");
+         };
+
+    btn1.addEventListener("click",()=>{
+        console.log("button was clicked handler-4");
+         })
+
+  
+// how to remove handler-3 function
+// 1)- assign a variable to a function that u want to remove .
+// 2)- then use removelistner function and pass that variable in the remove function
+// note = if two function with same name they conatain a seperate memory
+
+btn1.removeEventListener("click",handler3)
+
+
+</script>
+</html>
