@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        div{
+            height: 100px;
+            width:100px;
+            background-color: blueviolet;
+            color:white;
+            border:1px solid black
+        }
+    </style>
+</head>
+
+<body>
+    <!-- event handle through the inline handle -->
+    <button onclick = "console.log('button was clicked');alert('hello')"> click me!</button>
+    <button ondblclick = "console.log('button was clicked 2x');alert('hello')"> click me 2 times</button>
+    <div onmouseover="console.log('you are inside div');"> this is a box</div>
+    <!-- This is not correct way to use events -->
+   
+</body>
+</html>
