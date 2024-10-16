@@ -1,0 +1,29 @@
+<!-- event capturing = Parent to child -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event capturing</title>
+ </head>
+ <body>
+    <div>
+        <button>
+            CLICK ME
+        </button>
+    </div>
+    
+ </body>
+ <script>
+    let div = document.querySelector("div")
+    let button = document.querySelector("button")
+    div.addEventListener('click',()=>{
+        console.log("div");
+        
+    },true)
+    button.addEventListener('click',()=>{
+        console.log("button");
+        
+    },true)
+ </script>
+ </html>

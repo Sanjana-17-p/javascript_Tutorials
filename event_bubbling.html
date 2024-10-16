@@ -1,0 +1,30 @@
+<!-- event bubbling = child to parent -->
+ <!-- event propagation -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling </title>
+</head>
+<body>
+    <div> 
+        <button>click me</button>
+    </div>
+</body>
+<script>
+    let div = document.querySelector("div")
+    let button = document.querySelector("button")
+    div.addEventListener('click',()=>{
+        console.log("div");
+        
+        
+    })
+    button.addEventListener('click',(event)=>{
+        event.stopPropagation();
+        console.log("button");
+        
+    })
+</script>
+</html>
