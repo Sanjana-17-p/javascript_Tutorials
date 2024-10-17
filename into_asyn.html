@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // console.log('one')
+    // console.log('two')
+    
+    // setTimeout(()=>{
+    //     console.log('hello')
+    // },4000)    //timeout take callback
+    // timeout==> 2sec=2000ms
+    // console.log('four');
+
+
+    // ------- callbacks- Synchronous Programming
+    function sum(a,b){
+        console.log(a+b);
+        
+    }
+    function calculator(a,b,sumCallback){
+        sumCallback(a,b)
+    }
+    // calculator(1,2,sum)  // sum function call without ()
+            // or
+
+      calculator(1,2,(a,b)=>{
+        // console.log(a+b);
+        
+      })
+
+    //   callbacks--- >  in  asynchronous used as setTimeout()
+    function getData(dataId,getNextdata){
+        setTimeout(()=>{
+            console.log("data",dataId);
+            if(getNextdata){
+                getNextdata()
+            }
+            
+        },2000)
+
+        } 
+
+        // callback hell problem
+        getData(1,()=>{
+            getData(2,()=>{
+                getData(3)
+            })
+        });
+</script>
+</html>
