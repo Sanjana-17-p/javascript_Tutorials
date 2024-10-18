@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+
+    <button id = "stop">STOP</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log("Himanshi");
+        
+    // },2000)  
+        //    OR
+    //     const sayName =function(){
+    //     console.log("Himanshi");
+        
+    // }
+    // setTimeout(sayName,4000) 
+
+// ----------------- here we want to change h1 content(welcome ---> best js series) name   ------------
+    const changeText=function(){
+        document.querySelector('h1').innerHTML="best js series"
+    }
+    // setTimeout(changeText,4000)
+
+
+// now here we stop the event setTimeout using cleartimeout
+    //  assign a variable to setTimeout(changeText,4000)
+
+    const a =setTimeout(changeText,4000)
+    // clearTimeout(a)    // not good way
+    // so here we apply on event(button)
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(a)
+        console.log("Stopped");
+        
+    })
+
+
+
+
+
+   
+</script>
+</html>
