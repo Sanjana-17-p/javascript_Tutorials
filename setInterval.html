@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>setInterval</title>
+</head>
+<body>
+    <h1>Welcome </h1>
+    <button id ="start">START</button>
+    <button id ="stop">STOP</button>
+</body>
+<script>
+    // setInterval(function(){
+    //     console.log("sanjana",Date.now());
+        
+    // },1000)
+     const d= function(str){
+        // console.log("priya",Date.now());
+        console.log(str,Date.now());
+        }
+    // setInterval(d,1000 ,"hi")
+    // --------- clearInterval------
+    const i = setInterval(d,1000 ,"hi")
+    clearInterval(i)
+     
+
+</script>
+</html>
